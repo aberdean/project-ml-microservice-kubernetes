@@ -2,31 +2,10 @@
 
 ## Project Overview
 
-In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
-
-You are given a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. You can read more about the data, which was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing). This project tests your ability to operationalize a Python flask app—in a provided file, `app.py`—that serves out predictions (inference) about housing prices through API calls. This project could be extended to any pre-trained machine learning model, such as those for image recognition and data labeling.
-
-### Project Tasks
-
-Your project goal is to operationalize this working, machine learning microservice using [kubernetes](https://kubernetes.io/), which is an open-source system for automating the management of containerized applications. In this project you will:
-* Test your project code using linting
-* Complete a Dockerfile to containerize this application
-* Deploy your containerized application using Docker and make a prediction
-* Improve the log statements in the source code for this application
-* Configure Kubernetes and create a Kubernetes cluster
-* Deploy a container using Kubernetes and make a prediction
-* Upload a complete Github repo with CircleCI to indicate that your code has been tested
-
-You can find a detailed [project rubric, here](https://review.udacity.com/#!/rubrics/2576/view).
-
-**The final implementation of the project will showcase your abilities to operationalize production microservices.**
+This project containerizes a machine learning Python flask app using Docker and deploys it on a Kubernetes cluster.
+The app predicts housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. The data was initially taken from [Kaggle](https://www.kaggle.com/c/boston-housing).
 
 ---
-
-## Setup the Environment
-
-* Create a virtualenv and activate it
-* Run `make install` to install the necessary dependencies
 
 ### Running `app.py`
 
@@ -34,9 +13,35 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 2. Run in Docker:  `./run_docker.sh`
 3. Run in Kubernetes:  `./run_kubernetes.sh`
 
-### Kubernetes Steps
+### Making predictions
+In a separate terminal, run: `./make_prediction.sh`
 
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create Flask app in Container
-* Run via kubectl
+---
+
+### Project Structure
+The project includes 4 directories:
+- model_data containing the machine learning models
+- output_txt_files containing the output of running a prediction on Docker and on Kubernetes
+- .circleci containing the configuration file to implement CI/CD through CircleCI
+- .git containing the git files
+It also includes the following files:
+- app.py the main Python flask app
+- Dockerfile to define a Docker container
+- LICENSE containing info on the license
+- Makefile to build the project
+- make_prediction.sh to run predictions
+- README.md this file
+- requirements.txt containing the dependencies that are installed through the Makefile
+- run_docker.sh to launch a Docker container
+- run_kubernetes.sh to deploy containers on a Kubernetes cluster
+- upload_docker.sh to upload a Docker image to Docker Hub
+- .gitignore to list files that Git should ignore
+
+---
+
+## Authors
+ - Antonella Bernobich Dean - [aberdean](https://github.com/aberdean)
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/aberdean/static/blob/master/LICENSE) file for details.
+
