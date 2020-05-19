@@ -1,4 +1,4 @@
-<include a CircleCI status badge, here>
+![CircleCI](https://img.shields.io/circleci/build/gh/aberdean/project-ml-microservice-kubernetes)
 
 ## Project Overview
 
