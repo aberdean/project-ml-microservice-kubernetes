@@ -5,11 +5,15 @@
 
 # Step 1:
 # Create dockerpath
-# dockerpath=<your docker ID/path>
+dockerpath=aberdean/predictionapp
 
 # Step 2:  
 # Authenticate & tag
+docker login --username aberdean
+docker tag predictionapp $dockerpath
 echo "Docker ID and Image: $dockerpath"
 
 # Step 3:
 # Push image to a docker repository
+docker push $dockerpath
+
