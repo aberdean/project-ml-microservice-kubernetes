@@ -20,24 +20,24 @@ In a separate terminal, run: `./make_prediction.sh`
 
 ### Project Structure
 The project includes 4 directories:
-- model_data, containing the machine learning models
-- output_txt_files, containing the output of running a prediction on Docker and on Kubernetes
-- .circleci, containing the configuration file to implement CI/CD through CircleCI
-- .git, containing the git files
+- `model_data`, containing the machine learning models
+- `output_txt_files`, containing the output of running a prediction on Docker and on Kubernetes
+- `.circleci`, containing the configuration file to implement CI/CD through CircleCI
+- `.git`, containing the git files
 
 
 It also includes the following files:
-- app.py, the main Python flask app
-- Dockerfile, to define a Docker container
-- LICENSE, containing info on the license
-- Makefile, to build the project
-- make_prediction.sh, to run predictions
-- README.md, this file
-- requirements.txt, containing the dependencies that are installed through the Makefile
-- run_docker.sh, to launch a Docker container
-- run_kubernetes.sh, to deploy containers on a Kubernetes cluster
-- upload_docker.sh, to upload a Docker image to Docker Hub
-- .gitignore, to list files that Git should ignore
+- `app.py`, the main Python flask app
+- `Dockerfile`, to define a Docker container
+- `LICENSE`, containing info on the license
+- `Makefile`, to build the project
+- `make_prediction.sh`, to run predictions
+- `README.md`, this file
+- `requirements.txt`, containing the dependencies that are installed through the Makefile
+- `run_docker.sh`, to launch a Docker container
+- `run_kubernetes.sh`, to deploy containers on a Kubernetes cluster
+- `upload_docker.sh`, to upload a Docker image to Docker Hub
+- `.gitignore`, to list files that Git should ignore
 
 ---
 
